@@ -6,121 +6,14 @@
 <title>Jose-Ignacio Calderon</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#ffffff;
-    --ink:#14202B;
-    --ink-soft:#5B6673;
-    --line:#E4E1D8;
-    --accent:#00356B;
-    --panel:#F6F5F1;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font-family:'Inter', sans-serif;
-    line-height:1.6;
-  }
-  a{color:inherit;}
-  .wrap{max-width:1100px; margin:0 auto; padding:0 32px;}
- 
-  header{
-    display:flex; justify-content:space-between; align-items:center;
-    padding:22px 0; border-bottom:1px solid var(--line);
-  }
-  .brand{font-family:'Newsreader', serif; font-weight:500; font-size:15px; letter-spacing:0.02em;}
-  nav{display:flex; gap:28px; font-size:13.5px;}
-  nav a{text-decoration:none; color:var(--ink-soft); transition:color .15s;}
-  nav a:hover{color:var(--ink);}
- 
-  .hero{
-    display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px;
-    align-items:center; padding:80px 0 96px;
-  }
-  @media (max-width:860px){ .hero{grid-template-columns:1fr; padding:48px 0;} }
-  .eyebrow{
-    font-size:12.5px; text-transform:uppercase; letter-spacing:0.1em;
-    color:var(--accent); font-weight:600; margin-bottom:14px;
-  }
-  h1{
-    font-family:'Newsreader', serif; font-weight:500;
-    font-size:clamp(2.2rem, 4.4vw, 3.2rem); line-height:1.08; margin:0 0 20px;
-  }
-  .hero p{font-size:1.02rem; color:var(--ink-soft); max-width:46ch; margin-bottom:28px;}
-  .cta-row{display:flex; gap:14px; flex-wrap:wrap;}
-  .btn{
-    font-size:13.5px; font-weight:500; text-decoration:none;
-    padding:11px 20px; border-radius:3px; border:1px solid var(--ink);
-    transition:background .15s, color .15s;
-  }
-  .btn.solid{background:var(--ink); color:#fff;}
-  .btn.solid:hover{background:var(--accent); border-color:var(--accent);}
-  .btn.ghost:hover{background:var(--panel);}
- 
-  .portrait{
-    aspect-ratio:4/5; background:var(--panel); border:1px solid var(--line);
-    border-radius:4px; display:flex; align-items:center; justify-content:center;
-    color:var(--ink-soft); font-size:12.5px; text-align:center; padding:20px;
-  }
- 
-  section{padding:64px 0; border-top:1px solid var(--line);}
-  .section-head{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:36px; flex-wrap:wrap; gap:10px;}
-  .section-head h2{font-family:'Newsreader', serif; font-weight:500; font-size:1.7rem; margin:0;}
-  .section-head a{font-size:13px; color:var(--accent); text-decoration:none; font-weight:500;}
-  .section-head a:hover{text-decoration:underline;}
- 
-  .paper-list{display:flex; flex-direction:column;}
-  .paper{
-    display:grid; grid-template-columns:1fr auto; gap:6px 20px;
-    padding:20px 0; border-bottom:1px solid var(--line);
-  }
-  .paper:first-child{padding-top:0;}
-  .paper-title{font-size:1rem; font-weight:500;}
-  .paper-meta{font-size:12.5px; color:var(--ink-soft);}
-  .paper-status{
-    font-size:11.5px; color:var(--accent); font-weight:600;
-    white-space:nowrap; align-self:start;
-  }
- 
-  .project-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:24px;}
-  @media (max-width:860px){ .project-grid{grid-template-columns:1fr 1fr;} }
-  @media (max-width:560px){ .project-grid{grid-template-columns:1fr;} }
-  .project-card{
-    border:1px solid var(--line); border-radius:4px; padding:22px;
-    display:flex; flex-direction:column; gap:8px; transition:border-color .15s, transform .15s;
-  }
-  .project-card:hover{border-color:var(--accent); transform:translateY(-2px);}
-  .project-tag{font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--accent); font-weight:600;}
-  .project-card h3{font-family:'Newsreader', serif; font-weight:500; font-size:1.1rem; margin:0;}
-  .project-card p{font-size:13px; color:var(--ink-soft); margin:0;}
- 
-  .stats{display:grid; grid-template-columns:repeat(4, 1fr); gap:24px; text-align:center;}
-  @media (max-width:700px){ .stats{grid-template-columns:1fr 1fr;} }
-  .stat-num{font-family:'Newsreader', serif; font-size:2.4rem; color:var(--accent);}
-  .stat-label{font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); margin-top:4px;}
- 
-  .about-text{max-width:66ch; font-size:1rem; color:var(--ink-soft);}
-  .about-text p{margin-bottom:16px;}
- 
-  footer{border-top:1px solid var(--line); padding:48px 0 60px;}
-  .footer-grid{display:grid; grid-template-columns:2fr 1fr 1fr; gap:32px; margin-bottom:32px;}
-  @media (max-width:700px){ .footer-grid{grid-template-columns:1fr;} }
-  footer h4{font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-soft); margin-bottom:12px;}
-  footer ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; font-size:13.5px;}
-  footer ul a{text-decoration:none; color:var(--ink);}
-  footer ul a:hover{color:var(--accent);}
-  .footer-bottom{font-size:12.5px; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:20px;}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
  
 <header class="wrap">
   <div class="brand">JOSE-IGNACIO CALDERON</div>
   <nav>
-    <a href="#about">About</a>
+    <a href="about.html">About</a>
     <a href="#research">Research</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
@@ -139,7 +32,7 @@
       </p>
       <div class="cta-row">
         <a class="btn solid" href="#">Download CV</a>
-        <a class="btn ghost" href="#about">About me →</a>
+        <a class="btn ghost" href="about.html">About me →</a>
       </div>
     </div>
     <div class="portrait">Portrait photo goes here<br>(square-ish, 4:5 ratio)</div>
@@ -208,28 +101,6 @@
 </div>
  
 <div class="wrap">
-  <section id="about">
-    <div class="section-head"><h2>About</h2></div>
-    <div class="about-text">
-      <p>
-        My research focuses on the economics of education, public economics, and
-        labor economics — with an emphasis on how regulation and institutions shape
-        teacher careers and student trajectories through school systems in Chile.
-      </p>
-      <p>
-        I hold an MS in Economics (2025) and a BS in Industrial Engineering (2023),
-        both from Universidad de Chile. I've worked as a research assistant with the
-        Millennium Initiative for Labor Market Mismatch, PUC-Chile, Brunel University
-        London, the Center for Advanced Research in Education (U. de Chile), and the
-        Central Bank of Chile. I've presented work at the KU Leuven Workshop on the
-        Economics of Education and AERA.
-      </p>
-      <p>Languages: Spanish (native), English (fluent), Portuguese (intermediate–advanced).</p>
-    </div>
-  </section>
-</div>
- 
-<div class="wrap">
   <section>
     <div class="section-head"><h2>In numbers</h2></div>
     <div class="stats">
@@ -253,7 +124,7 @@
       <div>
         <h4>Sections</h4>
         <ul>
-          <li><a href="#about">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="#research">Research</a></li>
           <li><a href="#projects">Projects</a></li>
         </ul>
@@ -261,7 +132,7 @@
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><a href="mailto:you@example.com">Email</a></li>
+          <li><a href="mailto:joseignacalderon@gmail.com">Email</a></li>
           <li><a href="#">Google Scholar</a></li>
           <li><a href="#">CV (PDF)</a></li>
         </ul>
