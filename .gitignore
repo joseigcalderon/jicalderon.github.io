@@ -1,0 +1,26 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+ 
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+ 
+# Jekyll (in case GitHub Pages ever builds this with Jekyll)
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+ 
+# Logs
+*.log
+ 
+# Node (in case you ever add build tooling)
+node_modules/
+npm-debug.log*
+ 
+# Archives you don't want committed
+*.zip
