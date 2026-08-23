@@ -95,7 +95,7 @@ section.no-border{border-top:none;}
   display:flex; flex-direction:column; gap:8px; transition:border-color .15s, transform .15s;
 }
 .project-card:hover{border-color:var(--accent); transform:translateY(-2px);}
-.project-tag{font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--accent); font-weight:600;}
+.project-tag{font-size:9px; text-transform:uppercase; letter-spacing:0.06em; color:var(--accent); font-weight:600;}
 .project-card h3{font-family:'Newsreader', serif; font-weight:500; font-size:1.1rem; margin:0;}
 .project-card p{font-size:13px; color:var(--ink-soft); margin:0;}
 
