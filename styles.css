@@ -93,6 +93,7 @@ section.no-border{border-top:none;}
 .project-card{
   border:1px solid var(--line); border-radius:4px; padding:22px;
   display:flex; flex-direction:column; gap:8px; transition:border-color .15s, transform .15s;
+  text-decoration:none; color:inherit;
 }
 .project-card:hover{border-color:var(--accent); transform:translateY(-2px);}
 .project-tag{font-size:9px; text-transform:uppercase; letter-spacing:0.06em; color:var(--accent); font-weight:600;}
