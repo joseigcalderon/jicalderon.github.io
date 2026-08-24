@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>In the Media | Jose-Ignacio Calderon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/uchile.png">
+<link rel="stylesheet" href="styles.css?v=4">
+<style>
+  .media-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:40px 48px;
+    padding-bottom:80px;
+  }
+  @media (max-width:700px){ .media-grid{grid-template-columns:1fr;} }
+
+  .media-card{display:grid; grid-template-columns:130px 1fr; gap:18px;}
+  .media-thumb{
+    width:130px; height:98px; border:1px solid var(--line); border-radius:2px;
+    background:var(--panel); overflow:hidden;
+  }
+  .media-thumb img{width:100%; height:100%; object-fit:cover; display:block;}
+
+  .media-title{
+    font-family:'Newsreader', serif; font-size:1.05rem; font-weight:500;
+    text-decoration:none; color:var(--ink); line-height:1.35; display:block;
+  }
+  .media-title:hover{color:var(--accent);}
+  .media-type{font-size:12.5px; color:var(--ink-soft); margin-top:12px;}
+  .media-venue{font-size:12.5px; color:var(--ink-soft); margin-top:2px;}
+  .media-venue em{font-style:italic;}
+  .media-head{padding:56px 0 32px; text-align:center;}
+  .media-head h1{font-size:3rem; margin-bottom:6px;}
+  .media-head p{color:var(--ink-soft); font-size:0.95rem;}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="brand">JOSE-IGNACIO CALDERON</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="research.html">Research</a>
+    <a href="presentations.html">Presentations</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="media.html">Media</a>
+  </nav>
+</header>
+
+<div class="wrap">
+  <div class="media-head">
+    <h1>In the Media</h1>
+    <p>Opinion columns, letters, and press coverage of my work.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="media-grid" style="margin-top:40px;">
+    <div class="media-card">
+      <div class="media-thumb">
+        <img src="assets/pace_png.png" alt="Programa de Acceso a la Educación Superior (PACE)">
+      </div>
+      <div>
+        <a class="media-title" href="https://www.elmostrador.cl/noticias/opinion/cartas/2026/05/01/el-pace-no-es-gasto-es-movilidad-social/">PACE is not an arbitrary expense: it is social mobility</a>
+        <div class="media-type">Letter to the Editor</div>
+        <div class="media-venue"><em>El Mostrador</em>. May 1st, 2026.</div>
+      </div>
+    </div>
+
+    <div class="media-card">
+      <div class="media-thumb">
+        <img src="assets/cont_png.png" alt="A gas mask for education?">
+      </div>
+      <div>
+        <a class="media-title" href="https://contrafactual.cl/articulos/una-mascara-de-gas-para-la-educacion-el-efecto-de-politicas-de-descontaminacion-sobre-rendimiento-estudiantil/">A gas mask for education? The effect of decontamination policies on student performance</a>
+        <div class="media-type">Press Coverage</div>
+        <div class="media-venue"><em>Diario Financiero: Contrafactual</em>. March 21st, 2025.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Jose-Ignacio Calderon</h4>
+        <p style="font-size:13.5px; color:var(--ink-soft); max-width:36ch;">
+          Economist. My research focuses on microeconomics with a particular interest on education, public, and labor economics.
+        </p>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="presentations.html">Presentations</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="media.html">Media</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:joseignacalderon@gmail.com">joseignacalderon@gmail.com</a></li>
+          <li><a href="https://scholar.google.com/citations?user=qUJrlXQAAAAJ&hl=en">Google Scholar</a></li>
+          <li><a href="https://www.dropbox.com/scl/fi/8gcd1ia27gvtngcjf6j5j/CurriculumVitae_JICalderon.pdf?rlkey=m1ingiaoov976cdleeq0jbehe&st=hp75700h&dl=0">CV (PDF)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Jose-Ignacio Calderon</div>
+  </div>
+</footer>
+
+</body>
+</html>
