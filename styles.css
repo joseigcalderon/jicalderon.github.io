@@ -7,7 +7,7 @@
   --panel:#F6F5F1;
 }
 *{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth; scrollbar-gutter: stable;}
 body{
   margin:0;
   background:var(--bg);
@@ -24,6 +24,10 @@ header{
   padding:22px 0; border-bottom:1px solid var(--line);
 }
 .brand{font-family:'Newsreader', serif; font-weight:500; font-size:15px; letter-spacing:0.02em; text-decoration:none;}
+.brand-subtitle{
+  font-family:'Inter', sans-serif; font-size:10.5px; font-weight:600;
+  text-transform:uppercase; letter-spacing:0.07em; color:var(--accent);
+}
 nav{display:flex; gap:30px; font-size:14px;}
 nav a{text-decoration:none; color:var(--ink-soft); transition:color .15s;}
 nav a:hover, nav a.active{color:var(--ink);}
