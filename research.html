@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research | Jose-Ignacio Calderon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .rsch-head{padding:56px 0 32px; text-align:center;}
+  .rsch-head h1{font-size:2rem; margin-bottom:6px;}
+  .rsch-head p{color:var(--ink-soft); font-size:0.95rem;}
+ 
+  .rsch-filters{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:10px;
+    padding-bottom:30px;
+  }
+  .rsch-tab{
+    font-family:'Inter', sans-serif; font-size:12.5px; font-weight:500;
+    padding:8px 16px; border:1px solid var(--line); border-radius:3px;
+    background:#fff; color:var(--ink-soft); cursor:pointer;
+    transition:border-color .15s, color .15s;
+  }
+  .rsch-tab:hover{color:var(--ink);}
+  .rsch-tab.active{border-color:var(--accent); color:var(--accent);}
+ 
+  .rsch-columns{
+    display:grid; grid-template-columns:1fr 1fr; gap:56px;
+    padding-bottom:80px;
+  }
+  @media (max-width:800px){ .rsch-columns{grid-template-columns:1fr;} }
+ 
+  .rsch-col-head{
+    display:flex; justify-content:space-between; align-items:baseline;
+    margin-bottom:24px; flex-wrap:wrap; gap:10px;
+  }
+  .rsch-col-head h2{
+    font-family:'Inter', sans-serif; font-size:11px; font-weight:600;
+    text-transform:uppercase; letter-spacing:0.08em; color:var(--ink-soft);
+    margin:0;
+  }
+  .rsch-bibtex{
+    font-family:'Inter', sans-serif; font-size:11.5px; font-weight:600;
+    color:#fff; background:var(--accent); padding:9px 14px; border-radius:3px;
+    text-decoration:none; letter-spacing:0.03em;
+  }
+  .rsch-bibtex:hover{background:#710101;}
+ 
+  .rsch-card{
+    display:grid; grid-template-columns:64px 1fr; gap:16px;
+    padding:20px 0; border-bottom:1px solid var(--line);
+  }
+  .rsch-card:first-of-type{padding-top:0;}
+  .rsch-thumb{
+    width:64px; height:80px; border:1px solid var(--line); border-radius:2px;
+    background:var(--panel); display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace; font-size:9px; color:var(--ink-soft);
+    text-align:center; text-transform:uppercase; letter-spacing:0.04em;
+  }
+  .rsch-title{
+    font-family:'Arial', serif; font-size:12px; font-weight:550;
+    text-decoration:none; color:var(--ink); line-height:1.4;
+  }
+  .rsch-title:hover{color:var(--accent);}
+  .rsch-venue-line{font-size:11px; color:var(--ink-soft); margin-top:6px;}
+  .rsch-venue-line strong{color:var(--ink); font-weight:500;}
+  .rsch-badge{
+    display:inline-block; font-size:9px; font-weight:600; text-transform:uppercase;
+    letter-spacing:0.04em; color:var(--accent); background:rgba(0,53,107,0.08);
+    padding:2px 7px; border-radius:2px; margin-left:6px; vertical-align:middle;
+  }
+  .rsch-aside{font-style:italic; color:var(--ink-soft);}
+  .rsch-authors{font-size:11px; color:var(--ink-soft); margin-top:4px;}
+  .rsch-pills{display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;}
+  .rsch-pill{
+    font-family:'Inter', sans-serif; font-size:10.5px; font-weight:500;
+    border:1px solid var(--line); border-radius:20px; padding:4px 12px;
+    text-decoration:none; color:var(--ink-soft);
+  }
+  .rsch-pill:hover{border-color:var(--accent); color:var(--accent);}
+ 
+  .rsch-card.is-hidden{display:none;}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="brand">JOSE-IGNACIO CALDERON</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="research.html">Research</a>
+    <a href="presentations.html">Presentations</a>
+    <a href="#">Teaching</a>
+    <a href="#">Media</a>
+  </nav>
+</header>
+
+<div class="wrap">
+  <div class="rsch-head">
+    <h1>Research</h1>
+    <p>Working papers and presentations on teacher labor markets and school regulation.</p>
+  </div>
+ 
+  <div class="rsch-filters">
+    <button class="rsch-tab active" data-filter="all">All</button>
+    <button class="rsch-tab" data-filter="education">Education</button>
+    <button class="rsch-tab" data-filter="labor">Labor</button>
+    <button class="rsch-tab" data-filter="public">Public Economics</button>
+    <button class="rsch-tab" data-filter="mechanism">Mechanism Design</button>
+  </div>
+
+  <div style="display:flex; justify-content:center; padding-bottom:30px;">
+    <a class="rsch-bibtex" href="#">Download all BibTeX</a>
+    </div>
+  
+  <div class="rsch-columns"> 
+    <div>
+      <div class="rsch-col-head">
+        <h2>Working Papers</h2>
+      </div>
+
+      <div class="rsch-card" data-tags="education labor mechanism" style="line-height:1.3;">
+        <div class="rsch-thumb">PDF</div>
+        <div>
+          <a class="rsch-title" href="#">Reducing Teacher Turnover Through Stable Mechanisms</a>
+          <div class="rsch-venue-line">
+            <strong>August 2026</strong>
+            <span class="rsch-badge">Submitted</span>
+          </div>
+          <div class="rsch-authors">with Alessandra Diaz, Macarena Salas, Dany Lopez, and Diego Carrasco</div>
+          <div class="rsch-pills">
+            <a class="rsch-pill" href="#">BibTeX</a>
+            <a class="rsch-pill" href="#">PDF</a>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="rsch-card" data-tags="education labor public" style="line-height:1.3;">
+        <div class="rsch-thumb">PDF</div>
+        <div>
+          <a class="rsch-title" href="#">Teacher Turnover and Educational Reforms in Chile: Individual, School, and System-Level Factors</a>
+          <div class="rsch-venue-line">
+            <strong>August 2026</strong>
+            <span class="rsch-badge">Submitted</span>
+          </div>
+          <div class="rsch-authors">with Alessandra Diaz, Macarena Salas, Bernardita Tornero, Dany Lopez, and Diego Carrasco</div>
+          <div class="rsch-pills">
+            <a class="rsch-pill" href="#">BibTeX</a>
+            <a class="rsch-pill" href="#">PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="rsch-card" data-tags="education public" style="line-height:1.3;">
+        <div class="rsch-thumb">PDF</div>
+        <div>
+          <a class="rsch-title" href="#">Regulated Education Markets and Student Outcomes: Evidence from a Bundled Reform in Chile</a>
+          <div class="rsch-venue-line">
+            <strong>June 2026</strong>
+            <span class="rsch-badge">Submitted</span>
+          </div>
+          <div class="rsch-pills">
+            <a class="rsch-pill" href="#">BibTeX</a>
+            <a class="rsch-pill" href="#">PDF</a>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="rsch-card" data-tags="labor education" style="line-height:1.3;">
+        <div class="rsch-thumb">PDF</div>
+        <div>
+          <a class="rsch-title" href="#">Educational Reforms and Teacher Mobility (2015–2025): A Systematic Mapping Review</a>
+          <div class="rsch-venue-line">
+            <strong>Working paper</strong>
+            <span class="rsch-badge">Submitted</span>
+          </div>
+          <div class="rsch-authors">with Alessandra Diaz, Macarena Salas, Bernardita Tornero, Dany Lopez, and Diego Carrasco</div>
+          <div class="rsch-pills">
+            <a class="rsch-pill" href="#">BibTeX</a>
+            <a class="rsch-pill" href="#">PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <div>
+      <div class="rsch-col-head">
+        <h2>Work in Progress</h2>
+      </div>
+ 
+      <div class="rsch-card" data-tags="mechanism" style="line-height:1.3;">
+        <div class="rsch-thumb">PDF</div>
+        <div>
+          <a class="rsch-title" href="#">Stable Mechanisms and Less-Changeable Beliefs</a>
+          <div class="rsch-venue-line">
+            <span class="rsch-badge">Draft soon</span>
+          </div>
+          <div class="rsch-pills">
+            <a class="rsch-pill" href="#">BibTeX</a>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="rsch-card" data-tags="education labor public" style="line-height:1.3;">
+        <div class="rsch-thumb">PDF</div>
+        <div>
+          <a class="rsch-title" href="#">Principal Effectiveness and Teacher Turnover: Evidence from a Managerial Reform in Chile</a>
+          <div class="rsch-venue-line">
+            <span class="rsch-badge">Draft soon</span>
+          </div>
+          <div class="rsch-authors">with Alessandra Diaz, Macarena Salas, Dany Lopez, and Diego Carrasco</div>
+          <div class="rsch-pills">
+            <a class="rsch-pill" href="#">BibTeX</a>
+          </div>
+        </div>
+      </div>
+      <div class="rsch-card" data-tags="education labor" style="line-height:1.3;">
+        <div class="rsch-thumb">PDF</div>
+        <div>
+          <a class="rsch-title" href="#">Students on the Move, Teachers Too? Teacher Labor Market Responses to Immigrant Student Inflows</a>
+          <div class="rsch-venue-line">
+            <span class="rsch-badge">Draft soon</span>
+          </div>
+          <div class="rsch-authors">with Hugo Salgado and Max Villalobos</div>
+          <div class="rsch-pills">
+            <a class="rsch-pill" href="#">BibTeX</a>
+          </div>
+        </div>
+      </div>
+      <div class="rsch-card" data-tags="education public" style="line-height:1.3;">
+        <div class="rsch-thumb">PDF</div>
+        <div>
+          <a class="rsch-title" href="#">Kindergarten Enrollment, Early Student Achievement, and Upward Mobility to Top Schools: Evidence from Legislative Frictions in Chile</a>
+          <div class="rsch-venue-line">
+            <span class="rsch-badge">Draft soon</span>
+          </div>
+          <div class="rsch-pills">
+            <a class="rsch-pill" href="#">BibTeX</a>
+          </div>
+        </div>
+      </div>
+      <div class="rsch-card" data-tags="education" style="line-height:1.3;">
+        <div class="rsch-thumb">PDF</div>
+        <div>
+          <a class="rsch-title" href="#">Faith in the Right School: Estimating the Effects of Religious Matching on Student Achievement</a>
+          <div class="rsch-venue-line">
+            <span class="rsch-badge">Draft soon</span>
+          </div>
+          <div class="rsch-authors">with Consuelo Calderón</div>
+          <div class="rsch-pills">
+            <a class="rsch-pill" href="#">BibTeX</a>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+</div>
+ 
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Jose-Ignacio Calderon</h4>
+        <p style="font-size:13.5px; color:var(--ink-soft); max-width:36ch;">
+          Economist. My research focuses on microeconomics with a particular interest on education, public, and labor economics.
+        </p>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="presentations.html">Presentations</a></li>
+          <li><a href="#">Teaching</a></li>
+          <li><a href="#">Media</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:joseignacalderon@gmail.com">joseignacalderon@gmail.com</a></li>
+          <li><a href="#">Google Scholar</a></li>
+          <li><a href="#">CV (PDF)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Jose-Ignacio Calderon</div>
+  </div>
+</footer>
+ 
+<script>
+  const tabs = document.querySelectorAll('.rsch-tab');
+  const cards = document.querySelectorAll('.rsch-columns .rsch-card');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.dataset.filter;
+      cards.forEach(card => {
+        const tags = (card.dataset.tags || '').split(' ');
+        card.classList.toggle('is-hidden', filter !== 'all' && !tags.includes(filter));
+      });
+    });
+  });
+</script>
+ 
+</body>
+</html>
