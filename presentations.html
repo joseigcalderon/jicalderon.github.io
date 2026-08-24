@@ -12,6 +12,30 @@
   .presen-head{padding:56px 0 32px; text-align:center;}
   .presen-head h1{font-size:3rem; margin-bottom:6px;}
   .presen-head p{color:var(--ink-soft); font-size:0.95rem;}
+ 
+  .presen-filters{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:8px;
+    margin-bottom:14px;
+  }
+  .presen-filters.type-row{margin-bottom:36px;}
+  .presen-tab{
+    font-family:'Inter', sans-serif; font-size:12px; font-weight:500;
+    padding:7px 14px; border:1px solid var(--line); border-radius:20px;
+    background:#fff; color:var(--ink-soft); cursor:pointer;
+    transition:border-color .15s, color .15s;
+  }
+  .presen-tab:hover{color:var(--ink);}
+  .presen-tab.active{border-color:var(--accent); color:var(--accent); font-weight:600;}
+ 
+  .presen{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding:16px 0; border-bottom:1px solid var(--line); gap:20px;
+  }
+  .presen:first-of-type{padding-top:0;}
+  .presen-title{font-size:0.98rem; font-weight:500; color:var(--ink);}
+  .presen-meta{font-size:12.5px; color:var(--ink-soft); margin-top:3px;}
+  .presen-year{font-family:'Inter', sans-serif; font-size:12.5px; color:var(--ink-soft); white-space:nowrap;}
+  .presen.is-hidden{display:none;}
 </style>
 </head>
 <body>
@@ -33,57 +57,72 @@
         <h1>Presentations</h1>
         <p>Presentations at conferences, workshops, and other events.</p>
     </div>
+ 
+    <div class="presen-filters year-row">
+      <button class="presen-tab active" data-year="all">All years</button>
+      <button class="presen-tab" data-year="2026">2026</button>
+      <button class="presen-tab" data-year="2025">2025</button>
+      <button class="presen-tab" data-year="2024">2024</button>
+    </div>
+    <div class="presen-filters type-row">
+      <button class="presen-tab active" data-type="all">All types</button>
+      <button class="presen-tab" data-type="conference">Conference</button>
+      <button class="presen-tab" data-type="seminar">Seminar</button>
+      <button class="presen-tab" data-type="talk">Talk</button>
+      <button class="presen-tab" data-type="poster">Poster Session</button>
+    </div>
+ 
     <div class="presen-list" style="padding-bottom:80px;">
-      <div class="presen">
+      <div class="presen" data-year="2026" data-type="conference">
         <div>
           <div class="presen-title">2026 AERA Annual Meeting</div>
           <div class="presen-meta">American Educational Research Association, CA, USA</div>
         </div>
         <div class="presen-year">2026</div>
       </div>
-      <div class="presen">
+      <div class="presen" data-year="2026" data-type="conference">
         <div>
           <div class="presen-title">3rd Congress of Education and Pedagogy</div>
           <div class="presen-meta">University of Chile, Santiago, Chile</div>
         </div>
         <div class="presen-year">2026</div>
       </div>
-      <div class="presen">
+      <div class="presen" data-year="2025" data-type="poster">
         <div>
           <div class="presen-title">3rd Graduate Symposium</div>
           <div class="presen-meta">University of Chile, Santiago, Chile</div>
         </div>
         <div class="presen-year">2025</div>
       </div>
-      <div class="presen">
+      <div class="presen" data-year="2025" data-type="conference">
         <div>
           <div class="presen-title">International Conference on Education for a Globalized World</div>
           <div class="presen-meta">PUC-Valparaiso, Valparaiso, Chile</div>
         </div>
         <div class="presen-year">2025</div>
       </div>
-      <div class="presen">
+      <div class="presen" data-year="2025" data-type="conference">
         <div>
           <div class="presen-title">4th International Conference on Education and Scholarship Research</div>
           <div class="presen-meta">Queen Mary University of London, London, UK</div>
         </div>
         <div class="presen-year">2025</div>
       </div>
-      <div class="presen">
+      <div class="presen" data-year="2025" data-type="conference">
         <div>
           <div class="presen-title">Workshop on the Economics of Education</div>
           <div class="presen-meta">KU Leuven, Leuven, Belgium</div>
         </div>
         <div class="presen-year">2025</div>
       </div>
-      <div class="presen">
+      <div class="presen" data-year="2024" data-type="poster">
         <div>
           <div class="presen-title">2nd Graduate Symposium</div>
           <div class="presen-meta">University of Chile, Santiago, Chile</div>
         </div>
         <div class="presen-year">2024</div>
       </div>
-      <div class="presen">
+      <div class="presen" data-year="2024" data-type="conference">
         <div>
           <div class="presen-title">9th LEER Conference on Education Economics</div>
           <div class="presen-meta">KU Leuven, Leuven, Belgium</div>
@@ -92,7 +131,7 @@
       </div>
     </div>
 </div>
-
+ 
 <footer>
   <div class="wrap">
     <div class="footer-grid">
@@ -125,3 +164,41 @@
     <div class="footer-bottom">© 2026 Jose-Ignacio Calderon</div>
   </div>
 </footer>
+ 
+<script>
+  const yearTabs = document.querySelectorAll('.presen-tab[data-year]');
+  const typeTabs = document.querySelectorAll('.presen-tab[data-type]');
+  const items = document.querySelectorAll('.presen');
+ 
+  let activeYear = 'all';
+  let activeType = 'all';
+ 
+  function applyFilters(){
+    items.forEach(item => {
+      const matchesYear = activeYear === 'all' || item.dataset.year === activeYear;
+      const matchesType = activeType === 'all' || item.dataset.type === activeType;
+      item.classList.toggle('is-hidden', !(matchesYear && matchesType));
+    });
+  }
+ 
+  yearTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      yearTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      activeYear = tab.dataset.year;
+      applyFilters();
+    });
+  });
+ 
+  typeTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      typeTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      activeType = tab.dataset.type;
+      applyFilters();
+    });
+  });
+</script>
+ 
+</body>
+</html>
