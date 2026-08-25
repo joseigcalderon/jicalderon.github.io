@@ -17,11 +17,12 @@ body{
 }
 a{color:inherit;}
 .wrap{max-width:1100px; margin:0 auto; padding:0 32px;}
+.wrapbar{max-width:100%; margin:0 auto; padding:0 32px;}
 .wrap-wide{max-width:1200px; margin:0 auto; padding:0 32px;}
 
 header{
   display:flex; justify-content:space-between; align-items:center;
-  padding:22px 0; border-bottom:1px solid var(--line);
+  padding:22px 0; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:100; background:var(--bg);
 }
 .brand{font-family:'Newsreader', serif; font-weight:500; font-size:15px; letter-spacing:0.02em; text-decoration:none;}
 .brand-subtitle{
